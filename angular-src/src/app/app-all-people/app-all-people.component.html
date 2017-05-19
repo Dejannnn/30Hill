@@ -1,0 +1,41 @@
+
+
+<div class="container">
+  <div class="row" >
+    <div class="col-lg-3 col-sm-6" *ngFor="let people of allPeople">
+
+      <div class="card hovercard">
+        <div class="cardheader">
+
+        </div>
+        <div class="avatar">
+          <img alt="" src="../assets/img/download.png">
+        </div>
+        <div class="info">
+          <div class="title">
+            <a>{{people.firstName}}  {{people.surname}}</a>
+          </div>
+          <div class="desc">Age:{{people.age}}</div>
+          <div class="desc">Gender: {{people.gender}}</div>
+
+        </div>
+        <div class="bottom">
+          <a class="btn btn-primary btn-address-card btn-sm" (click)="showDirectUser(people.id)">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </a>
+          <a class="btn btn-danger btn-sm" rel="publisher" (click)="showFreindsOfFreinds(people.id)">
+            <i class="fa fa-users"></i>
+          </a>
+          <a class="btn btn-primary btn-sm" rel="publisher" (click)="showSugesstedFreinds(people.id)" >
+            <i class=" fa fa-lightbulb-o"></i>
+          </a>
+
+
+        </div>
+        <p><i><b>Number friend: {{people.friends.length}}</b></i></p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
